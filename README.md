@@ -84,7 +84,7 @@ The Blogger extension uses the following libraries and frameworks:
 **Changelog**
 ------------
 
-*   `1.0.0`: Initial release of the Blogger extension
+*   `0.0.1`: Initial release of the Blogger extension
 
 **Roadmap**
 ------------
