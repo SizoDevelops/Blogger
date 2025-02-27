@@ -1,0 +1,91 @@
+{
+  "name": "blogger-markdown-to-json",
+  "displayName": "blogger",
+  "description": "Convert Markdown files to JSON with a single command, simplifying data transformation and integration.",
+  "version": "0.0.1",
+  "keywords": [
+    "markdown to json converter",
+    "json data transformer",
+    "markdown integration tool",
+    "productivity extension for developers",
+    "coding assistant for markdown files",
+    "vscode markdown extension",
+    "json data converter for vscode"
+  ],
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Formatters"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "markdownToJson",
+        "title": "Convert Markdown to JSON",
+        "category": "Blogger"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorLangId == markdown",
+          "command": "markdownToJson",
+          "group": "navigation"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "key": "ctrl+alt+m",
+        "command": "markdownToJson",
+        "when": "editorLangId == markdown"
+      },
+      {
+        "key": "cmd+shift+m",
+        "command": "markdownToJson",
+        "when": "editorLangId == markdown"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.97.0",
+    "@typescript-eslint/eslint-plugin": "^8.22.0",
+    "@typescript-eslint/parser": "^8.22.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.19.0",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.7.3",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SizoDevelops/Blogger.git"
+  },
+  "author": "Sizo Develops",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SizoDevelops/Blogger/issues"
+  },
+  "homepage": "https://github.com/SizoDevelops/Blogger#readme"
+}
