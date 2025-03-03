@@ -1,8 +1,10 @@
 {
-  "name": "blogger-markdown-to-json",
-  "displayName": "blogger",
-  "description": "Convert Markdown files to JSON with a single command, simplifying data transformation and integration.",
+  "name": "markdown-to-json",
+  "displayName": "Markdown to JSON Converter",
+  "description": "Convert Markdown files written in front matter to JSON with a single command, simplifying data transformation and integration.",
   "version": "0.0.1",
+  "publisher": "SizoDevelops",
+  "icon": "icon-128.png",
   "keywords": [
     "markdown to json converter",
     "json data transformer",

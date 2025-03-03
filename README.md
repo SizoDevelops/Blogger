@@ -1,12 +1,12 @@
 
 
-**Blogger Extension Documentation**
+**Markdown To JSON Extension Documentation**
 =====================================
 
 **Overview**
 ------------
 
-The Blogger extension is a Visual Studio Code (VS Code) extension designed to simplify the process of converting Markdown files to JSON. This extension provides a convenient way to transform Markdown content into a JSON format, making it easier to work with data in various applications.
+The Markdown To JSON extension is a Visual Studio Code (VS Code) extension designed to simplify the process of converting Markdown files to JSON. This extension provides a convenient way to transform Markdown content into a JSON format, making it easier to work with data in various applications.
 
 **Features**
 ------------
@@ -19,17 +19,17 @@ The Blogger extension is a Visual Studio Code (VS Code) extension designed to si
 **Installation**
 ------------
 
-To install the Blogger extension, follow these steps:
+To install the Markdown To JSON extension, follow these steps:
 
 1.  Open VS Code
 2.  Navigate to the Extensions view by clicking the Extensions icon in the left sidebar or pressing `Ctrl + Shift + X` (Windows/Linux) or `Cmd + Shift + X` (macOS)
-3.  Search for "Blogger" in the Extensions marketplace
+3.  Search for "Markdown To JSON" in the Extensions marketplace
 4.  Click the "Install" button to install the extension
 
 **Usage**
 -----
 
-To use the Blogger extension, follow these steps:
+To use the Markdown To JSON extension, follow these steps:
 
 1.  Open a Markdown file in VS Code
 2.  Click the "Command Palette" by pressing `Ctrl + Shift + P` (Windows/Linux) or `Cmd + Shift + P` (macOS)
@@ -40,19 +40,19 @@ To use the Blogger extension, follow these steps:
 **Commands**
 ------------
 
-The Blogger extension provides the following command:
+The Markdown To JSON extension provides the following command:
 
 *   `markdownToJson`: Converts the active Markdown file to JSON data and creates a new JSON file
 
 **Settings**
 ------------
 
-The Blogger extension does not have any specific settings. However, you can configure the extension's behavior by modifying the VS Code settings.
+The Markdown To JSON extension does not have any specific settings. However, you can configure the extension's behavior by modifying the VS Code settings.
 
 **Troubleshooting**
 -----------------
 
-If you encounter any issues with the Blogger extension, please refer to the following troubleshooting steps:
+If you encounter any issues with the Markdown To JSON extension, please refer to the following troubleshooting steps:
 
 *   Check the VS Code console for any error messages
 *   Verify that the Markdown file is correctly formatted
@@ -61,7 +61,7 @@ If you encounter any issues with the Blogger extension, please refer to the foll
 **Contributing**
 ------------
 
-If you would like to contribute to the Blogger extension, please follow these steps:
+If you would like to contribute to the Markdown To JSON extension, please follow these steps:
 
 1.  Fork the extension's repository on GitHub
 2.  Create a new branch for your feature or bug fix
@@ -71,12 +71,12 @@ If you would like to contribute to the Blogger extension, please follow these st
 **License**
 -------
 
-The Blogger extension is licensed under the MIT License.
+The Markdown To JSON extension is licensed under the MIT License.
 
 **Acknowledgments**
 ----------------
 
-The Blogger extension uses the following libraries and frameworks:
+The Markdown To JSON extension uses the following libraries and frameworks:
 
 *   `gray-matter`: A library for parsing Markdown files
 *   `vscode`: The VS Code extensibility API
@@ -84,7 +84,7 @@ The Blogger extension uses the following libraries and frameworks:
 **Changelog**
 ------------
 
-*   `0.0.1`: Initial release of the Blogger extension
+*   `0.0.1`: Initial release of the Markdown To JSON extension
 
 **Roadmap**
 ------------
