@@ -78,7 +78,8 @@
     "webpack-cli": "^6.0.1"
   },
   "dependencies": {
-    "gray-matter": "^4.0.3"
+    "gray-matter": "^4.0.3",
+    "json-stringify-pretty-compact": "^4.0.0"
   },
   "repository": {
     "type": "git",

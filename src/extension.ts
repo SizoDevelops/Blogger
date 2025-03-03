@@ -3,7 +3,7 @@
 import * as vscode from "vscode";
 import matter from "gray-matter";
 import path from "path";
-
+import stringify from "json-stringify-pretty-compact";
 export function activate(context: vscode.ExtensionContext) {
   //   const intervalId = setInterval(() => {
   //     const activeEditor = vscode.window.activeTextEditor;
@@ -16,7 +16,7 @@ export function activate(context: vscode.ExtensionContext) {
       if (activeEditor) {
         const text = activeEditor.document.getText();
         const { content, data } = matter(text);
-        const jsonData = JSON.stringify({ content, data });
+        const jsonData = { content, data };
 
         //   create file in file system
         // Find src folder in workspace
@@ -31,14 +31,8 @@ export function activate(context: vscode.ExtensionContext) {
             srcFolder.fsPath + "/markdown"
           );
 
-          if (await vscode.workspace.fs.stat(srcFolder)) {
-            // src folder exists, create MarkDown folder inside it
-            vscode.workspace.fs.createDirectory(markdownFolder);
-          } else {
-            // src folder does not exist, create it and then create MarkDown folder inside it
-            vscode.workspace.fs.createDirectory(srcFolder);
-            vscode.workspace.fs.createDirectory(markdownFolder);
-          }
+          vscode.workspace.fs.createDirectory(srcFolder);
+          vscode.workspace.fs.createDirectory(markdownFolder);
 
           const jsonFilePath = path.join(
             markdownFolder.fsPath,
@@ -49,7 +43,13 @@ export function activate(context: vscode.ExtensionContext) {
           );
           const jsonUri = vscode.Uri.file(jsonFilePath);
 
-          vscode.workspace.fs.writeFile(jsonUri, Buffer.from(jsonData));
+          const formattedJson = stringify(jsonData, {
+            indent: 2, // use 2 spaces for indentation
+            maxLength: 40, // wrap lines at 80 characters
+          });
+          vscode.workspace.fs.writeFile(jsonUri, Buffer.from(formattedJson));
+
+          //   use a formarter to format this file
         }
       }
     }
